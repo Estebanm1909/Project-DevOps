@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background-image: url('imagenes/retro.png');
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: moverFondo  linear infinite;
+    text-align: center;
+
+}
+
+/* Animación para hacer que el fondo se desplace */
+@keyframes moverFondo {
+    0% { background-position: 0 0; }
+    100% { background-position: -500px 0; } /* Ajusta según el tamaño de la imagen */
+}
+img {
+    width: 105px;
+    height: auto;
+    image-rendering: pixelated; /* Mantiene el efecto pixelado */
+}
+#sprite {
+    width: 50px; /* Ajusta el tamaño del sprite */
+    position: absolute;
+    left: 100px; /* Posición inicial */
+    top: 200px;
+    image-rendering: pixelated; /* Mantiene el efecto retro */
+}
+.game-container {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /*background-color: #ff6700; /* Naranja brillante */
+    color: rgb(90, 69, 204);
+    /*border: 3px solid #ffcc00;*/
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #0078ff; /* Azul vibrante */
+    border: 3px solid #ff6700; /* Naranja fuerte */
+    box-shadow: 4px 4px 0px #ffcc00; /* Sombras de estilo pixelado */
+}
+  
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff6700; /* Naranja brillante */
+    color: white;
+    border: 3px solid #ffcc00;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+
+}
+
+button:hover {
+    background-color: #0078ff;
+}
